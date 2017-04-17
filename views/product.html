@@ -1,0 +1,22 @@
+<div class="container">
+	<ol class="breadcrumb">
+	  <li><a href="#">首页</a></li>
+	  <li><a href="#">商品</a></li>
+	  <li class="active">所有商品</li>
+	</ol>
+
+	<div class="row">
+	  <div class="col-sm-6 col-md-4" ng-repeat="product in productList">
+	    <div class="thumbnail">
+	      <img ng-src="images/{{product.product_image}}" alt="...">
+	      <div class="caption">
+	        <h3>{{product.product_name}}</h3>
+	        <p>{{product.product_price | currency : "&yen;"}}</p>
+	        <p>{{product.product_des | limitTo : 10}}</p>
+	        <p><a class="btn btn-success" role="button">直接购买</a> <a ng-click="addShopcar(product)" class="btn btn-warning" role="button">加入购物车</a></p>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+</div>
